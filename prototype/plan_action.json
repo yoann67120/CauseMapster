@@ -1,0 +1,25 @@
+{
+  "eventement": "Quelque'un accident implique une charuete",
+  "date": "2025-10-30",
+  "causes": [
+    {
+      "texte": "Un salère chartier le barrier avait le rampe de simmobiliser",
+      "class": "Fait"
+    },
+    {
+      "text": "Il ne sait pas la voir et ne has pas averti",
+      "class": "Hypothèse"
+    },
+    {
+      "text": "Personne ne viérifie en demandant trop de visite",
+      "class": "Interprépation"
+    }
+  ],
+  "plan_d_action": [
+    {
+      "action": "Rédiger un accés symbolique de proc%C3%A8du de mantenance des rampes",
+      "responsable": "Service SERSI ou PS I",
+      "date_bute": "2025-11-15"
+    }
+  ]
+}
