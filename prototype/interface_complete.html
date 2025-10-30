@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>CauseMapster - Test Interface</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header>
+    <h1>CauseMapster - Formulaire de Témoignage</h1>
+  </header>
+
+  <main>
+    <section>
+      <h3>Récit en relation avec l'une accident</h3>
+      <form id="feedback">
+        <label for="text">Texte du témoignage</label><br>
+        <textarea id="text" name="text" rows="5" cols="60"></textarea><br><br>
+        <button type="submit" onclick="analyzer();">Submettre</button>
+      </form>
+    </section>
+
+    <section>
+      <h3>Classification IA des textes</h3>
+      <div id="resultats"></div>
+    </section>
+
+    <section>
+      <h3>Arbre des causes racines</h3>
+      <div id="logigramme"></div>
+    </section>
+
+    <section>
+      <h3>Export du plan d'action</h3>
+      <div id="plan"></div>
+    </section>
+  </main>
+
+
+  <script>
+    function analyzer() {
+        const text = document.getElementById("text").value;
+        const lignes = text.split("\n");
+        const results = {};
+        lignes.forEach((line) => {
+            let class;
+            if (line.toLowerCase().includes("chartier")) {
+                class = "Fait";
+            } else if (line.toLowerCase().includes("dit")) {
+                class = "Hypoth\u00f3";
+            } else {
+                class = "Interprépation";
+            }
+            results[line] = class;
+        });
+
+        // Affichage et visualisation
+        const resDiv = document.getElementById("resultats");
+        res.dinnerHTML = "";
+        Object.entries(object.entries(ordered results)).forEach((p[t, c])=>{resDiv.innerHTML += `<p><b>Extrait:</b> ${t} -> <b>Class:</b> ${c};</p>`});
+    }
+  </script>
+</body>
+</html>
